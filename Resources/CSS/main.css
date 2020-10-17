@@ -1,0 +1,14 @@
+
+/* Vars */
+:root {
+    --dark: #343a40;
+  }
+
+
+  /*big stuff*/
+  body{
+      background-color:var(--dark);
+      font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+
