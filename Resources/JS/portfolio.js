@@ -13,12 +13,12 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         
     }*/
 
-    
+
     await getSkills();
     await placeSkills();
 
     //initially enable all skills
-    enableAllSkills();
+    setAllSkills(true);
 
     //setup click skill listener
     setupListeners();
@@ -29,20 +29,24 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
 
 ///SETUP/////////////////
-async function getSkills(){
+async function getSkills() {
     const response = await fetch('/API/QUERIES/PORTFOLIO/skills');
     const json = await response.json();
     skills = json;
 }
 
 
-function placeSkills(){
+function placeSkills() {
     const root = document.getElementById("skillsList");
     skillsList.innerHTML = "";
     for (const [key, value] of Object.entries(skills)) {
         const newSkillElement = skillElement(key);
         skillsList.appendChild(newSkillElement);
-      }
+    }
+}
+
+function isSkillEnabled(skillButton) {
+    return
 }
 
 function setupListeners() {
@@ -57,11 +61,58 @@ function setupListeners() {
     search.addEventListener('input', function (evt) {
         filterSkills(this.value);
     });
+
+    const custom = document.getElementById('custom-search');
+    custom.addEventListener('click', function (e) {
+        flipAll(true);
+    });
 }
 
 
 
 ////////////////////ENABLE DISABLE SKILLS
+
+function flipAll(actually) {
+
+    const custom = document.getElementById('custom-search');
+
+    if (actually) {
+        //click or unclick all based on current reading
+        if (custom.innerHTML == "None") {
+            setAllSkills(false);
+            custom.innerHTML = "All";
+        } else {
+            setAllSkills(true);
+
+            custom.innerHTML = "None";
+        }
+
+
+    } else { //just updating the UID
+        /*  const skills = document.getElementsByClassName("skill");
+          var saw = false;
+          for (var i = 0; i < skills.length; i++) {
+              const skill = skills[i];
+              if (isSkillEnabled(skill)) {
+                  saw = true;
+              }
+          }
+  
+          if(saw){
+          custom.innerHTML = "None";
+          }else{
+      custom.innerHTML = "All";
+          }*/
+
+    }
+
+
+
+
+
+
+
+}
 
 function clickedSkill(e) {
     const skill = this;
@@ -69,87 +120,85 @@ function clickedSkill(e) {
     const enabled = skill.classList.contains("skill-enabled");
     console.log("clicked skill: " + id);
 
-    setSkillEnabled(skill,!enabled);
+    setSkillEnabled(skill, !enabled);
 }
 
 
-function enableAllSkills() {
+function setAllSkills(on) {
     const skills = document.getElementsByClassName("skill");
     for (var i = 0; i < skills.length; i++) {
         const skill = skills[i];
-        setSkillEnabled(skill,false);
-       setSkillEnabled(skill,true);
-       setSkillBig(skill,false);
+        setSkillEnabled(skill, !on);
+        setSkillEnabled(skill, on);
+        setSkillBig(skill, false);
     }
 }
 
-function setSkillEnabled(skill,enabled){
-    const remove = enabled ?  "skill-disabled" : "skill-enabled";
+function setSkillEnabled(skill, enabled) {
+    const remove = enabled ? "skill-disabled" : "skill-enabled";
     const add = enabled ? "skill-enabled" : "skill-disabled";
     skill.classList.remove(remove);
     skill.classList.add(add);
 
 }
 
-function setSkillBig(skill,big){
-        if(big){
-            skill.classList.add("skill-big");
-        }else{
-            skill.classList.remove("skill-big");
+function setSkillBig(skill, big) {
+    if (big) {
+        skill.classList.add("skill-big");
+    } else {
+        skill.classList.remove("skill-big");
 
-        }
- 
-   
+    }
 }
 /////////////////////////////////////////
 //////////////////SEARCH SKILLS///////////////
 
-function filterSkills(filter){
+function filterSkills(filter) {
     filter = filter.toLowerCase();
-    
- ///start by showing all skills
- enableAllSkills();
 
- //now if filter is nothing, end
- if(filter == null || filter == ""){
-     return;
- }
+    ///start by showing all skills
+    setAllSkills(true);
 
- //otherwise, loop through all skills and if that skill doesnt contain search query then hide it
- //note: database we may want to add tags to each skill to popup in a search
- for (const [key, value] of Object.entries(skills)) {
-     const originalSkill = key;
-     const skill = String(key).toLocaleLowerCase();
-        if(skill.indexOf(filter) != -1){
-            setSkillBig(document.getElementById(originalSkill),true)
-     
+    //now if filter is nothing, end
+    if (filter == null || filter == "") {
+        return;
+    }
+
+    //otherwise, loop through all skills and if that skill doesnt contain search query then hide it
+    //note: database we may want to add tags to each skill to popup in a search
+    for (const [key, value] of Object.entries(skills)) {
+        const originalSkill = key;
+        const skill = String(key).toLocaleLowerCase();
+        if (skill.indexOf(filter) != -1) {
+            setSkillBig(document.getElementById(originalSkill), true)
+
             continue;
         }
 
-        if(value != null && value.length > 0){
+        //look in subtags
+        if (value != null && value.length > 0) {
             var found = false;
-            for(x of value){
-              
+            for (x of value) {
                 x = String(x).toLowerCase();
-                if(x.indexOf(filter) != -1){
+                if (x.indexOf(filter) != -1) {
                     found = true;
                     break;
                 }
             }
-            if(found){
+            if (found) {
                 continue;
             }
         }
-   
-        setSkillEnabled(document.getElementById(originalSkill),false);
- }
- //also remove capitalizations
+
+        setSkillEnabled(document.getElementById(originalSkill), false);
+    }
+    //also remove capitalizations
 }
 
 
-//////////////UI CREAATION
+//////////////UI CREATION
 
-function skillElement(skill){
+function skillElement(skill) {
     const skillElement = document.createElement('div');
     skillElement.id = skill;
     skillElement.classList.add("skill");

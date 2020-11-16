@@ -31,6 +31,9 @@ function getTagsForSkill($skill){
 
 ////////////////---------------------------
 
+$skillCheck = $_GET['skill'];
+
+if(is_null($skillCheck)){
 
 //no skill passed in URL? send complete skill list with every tag 
 $skills = getAllSkills();
@@ -39,6 +42,12 @@ foreach ($skills as $key => $value) {
     $skills[$key] = getTagsForSkill($key);
    }
    echo json_encode($skills);
+}else{
+
+    $results = getTagsForSkill($skillCheck);
+    echo json_encode($results);
+}
+
 
 
 
