@@ -1,0 +1,8 @@
+create table item_skill (
+    skill_name VARCHAR(250),
+    item_id INTEGER,
+    FOREIGN KEY(item_id) REFERENCES item(id),
+    FOREIGN KEY(skill_name) REFERENCES skill(name)
+    );
+
+    

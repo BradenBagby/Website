@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
     await getSkills();
     await placeSkills();
+    await loadInitial();
 
     //initially enable all skills
     setAllSkills(true);
@@ -206,4 +207,23 @@ function skillElement(skill) {
     spanElement.innerHTML = "" + skill;
     skillElement.appendChild(spanElement);
     return skillElement;
+}
+
+
+
+///////////////FILL IN PORTFOLIO
+
+var portfolioTiles = {}; //[itemID : HTML]
+
+
+
+async function loadInitial(){
+
+//get all skill displays
+const response = await fetch('/API/QUERIES/PORTFOLIO/getPages.php');
+const json = await response.json();
+portfolioTiles=json;
+
+
+
 }

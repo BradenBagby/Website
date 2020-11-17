@@ -1,0 +1,84 @@
+TheMove
+
+AuxKing
+
+InstagramClone (finish this)
+
+Chip Chomp
+
+Network Scanner C++ GUI
+
+Scinomix Expenses App
+    Flutter + Admin Web App
+
+Update .Net DBA App
+
+C# VXQ Remote Control API
+
+Whopper Intranet
+
+ZAxis Tester
+    "C++ app to run test cases on a machine. Web app to display status remotely. (Beaglebone, Boost, QT, Linux)"
+    
+
+Serial Motor C# API
+Mike Motor C# API
+
+Wordpress Website
+    increase speed
+    perform updates
+    cusotm php
+
+Sonicator Machine updates
+
+Pump REST API
+
+LIMS system
+
+Origianl VXQ 
+    Programmed automated machine that sorts medical tubes communicating with
+motors over serial, with remote control web app using PHP and C++ sockets
+(Beaglebone, Boost, QT, Linux)
+
+
+DBA Web app 
+    Wrote web app using Javascript, HTML, CSS, and PHP that displays company’s
+inventory from SQL DB to any employer with password
+
+
+iZaLyt
+    Wrote iOS and Android App that controls Bluetooth enabled lights (‘iZalyts’)
+using FFT to allow lights to sync to music (Swift and Java)
+
+The Move LLC - Springfield, MO. — Lead Software Engineer
+• Social media for college students - Plan your night, see where your friends are
+going. Manage Friends, Messaging, Notifications, Firebase real time DB,
+Flutter, Google Maps, IAP, DB Security, iOS + Android
+
+
+Desi Rides LLC - Springfield, MO — Lead Software Engineer
+• Swift + Kotlin app for iOS and android. Node.js for server code to receive
+payments through Stripe and manage accounts.
+• App allows organizations to create an account, select drivers, and provide
+rides to their events.
+
+
+Trippy Bird
+
+Hulo
+
+Jump SFX
+
+Golf Trax
+
+FadeMirror
+    find old videos
+    show some code?
+
+Look at tube site in my drive:
+    Code>tubeSite.zip
+
+
+
+
+
