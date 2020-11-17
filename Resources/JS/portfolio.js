@@ -214,6 +214,7 @@ function skillElement(skill) {
 ///////////////FILL IN PORTFOLIO
 
 var portfolioTiles = {}; //[itemID : HTML]
+var portfolioItems = {}; //item : [skills]
 
 
 
