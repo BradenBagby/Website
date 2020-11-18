@@ -1,5 +1,11 @@
 TheMove
 
+bavckgorund: The Move LLC comapany started by me and 3 friends. Sole developer
+Plannnig: Planned out databse. App architecture. App requirements. 
+Created data structures. Printed everything out to constantly view and it every day. 
+Completely architected before starting.
+Dev:
+
 AuxKing
 
 InstagramClone (finish this)
@@ -19,7 +25,7 @@ Whopper Intranet
 
 ZAxis Tester
     "C++ app to run test cases on a machine. Web app to display status remotely. (Beaglebone, Boost, QT, Linux)"
-    
+
 
 Serial Motor C# API
 Mike Motor C# API

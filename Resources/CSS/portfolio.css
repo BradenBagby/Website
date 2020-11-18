@@ -112,3 +112,36 @@ font-size: 12px;
 color:white;
 cursor:pointer;
 }
+
+
+
+/* ---------------- TILES --------------- */
+.portfolio-tile{
+    margin-top:8px;
+}
+
+.card-header{
+font-weight:900;
+}
+
+.more-info{
+    margin-top:8px;
+}
+
+.more-btn{
+    float:right;
+    display:block;
+    color:#007bff;
+}
+
+.more-btn:hover{
+    cursor:pointer;
+}
+
+div[class^="col-"] {
+   padding:8px !important;
+  }
+
+  .tile-skills{
+      font-weight: 100;
+  }

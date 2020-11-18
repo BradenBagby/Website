@@ -21,6 +21,9 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     //initially enable all skills
     setAllSkills(true);
 
+    //setup initial portfolio
+    await updatePortfolioUI();
+
     //setup click skill listener
     setupListeners();
 
@@ -197,6 +200,19 @@ function filterSkills(filter) {
 }
 
 
+function getSelectedSkills() {
+    const skills = document.getElementsByClassName("skill");
+    var final = [];
+    for (var i = 0; i < skills.length; i++) {
+        const skill = skills[i];
+        if (skill.classList.contains("skill-enabled")) {
+            final.push(skill.id);
+        }
+    }
+    return final;
+}
+
+
 //////////////UI CREATION
 
 function skillElement(skill) {
@@ -217,13 +233,86 @@ var portfolioTiles = {}; //[itemID : HTML]
 var portfolioItems = {}; //item : [skills]
 
 
+function portfolioElementFromId(portfolio_id){
+    if(portfolioTiles[portfolio_id] == null){
+        return null;
+    }
+    const el = document.createElement("div");
+    el.classList.add("portfolio-tile");
+    el.classList.add("col-12");
+    el.id = portfolio_id;
+    el.innerHTML = portfolioTiles[portfolio_id];
+    return el;
+}
 
-async function loadInitial(){
+async function updatePortfolioUI() {
+    const enabledSkills = getSelectedSkills();
 
-//get all skill displays
-const response = await fetch('/API/QUERIES/PORTFOLIO/getPages.php');
-const json = await response.json();
-portfolioTiles=json;
+    var newElements = [];
+
+    console.log(portfolioItems)
+    for (var portfolio_id in portfolioItems) {
+        const portfolio = portfolioItems[portfolio_id]
+        //check if portfolio has a skill in the enabled skills
+        var has = false;
+        if (portfolio.skills != null) {
+            for (var i = 0; i < portfolio.skills.length; i++) {
+                const skill = portfolio.skills[i];
+                if(enabledSkills.includes(skill)){
+                    has = true;
+                    break;
+                }
+            }
+        }
+        if(has){
+            //show this item
+            console.log("showing: " + portfolio_id + " - " + portfolio.name)
+            if(portfolioTiles[portfolio_id] != null){
+                newElements.push(portfolioElementFromId(portfolio_id));
+            }
+        }else{
+            console.log("not showing: " + portfolio_id + " - " + portfolio.name)
+        }
+    }
+
+    console.log(newElements);
+
+    ///add each element to correct spot
+    const root = document.getElementById("portfolio-tiles");
+    for(var i = 0; i< newElements.length; i ++){
+        const el = newElements[i];
+        const id = el.id;
+        root.appendChild(el);
+
+        //using a timeout to give root time to parse element before setting the sklils
+        setTimeout(function(){ 
+
+            const skillList =  document.getElementById(id).getElementsByClassName("tile-skills-list")[0];
+            const skills = portfolioItems[id].skills;
+            for(skill of skills){
+                const span = document.createElement("span");
+                span.innerHTML = skill;
+                skillList.appendChild(span);
+            }
+    }, 500);
+    }
+
+
+}
+
+async function loadInitial() {
+
+    //get all skill displays
+    var response = await fetch('/API/QUERIES/PORTFOLIO/getPages.php');
+    var json = await response.json();
+    portfolioTiles = json;
+
+    //get all items
+    response = await fetch('/API/QUERIES/PORTFOLIO/items.php');
+    json = await response.json();
+    portfolioItems = json;
+
+    console.log(portfolioItems);
 
 
 
