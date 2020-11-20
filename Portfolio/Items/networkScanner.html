@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="./Resources/CSS/main.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Braden Bagby</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_1-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">C++ Network Scanner</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+
+                        <div class="col-12">
+
+                            <p>Network Scanner GUI allows a user to conduct scans of type: SYN, TCP HANDSHAKE, FIN, and XMAS using a graphical user interface. It also allows users to run a custom TCP packet with customized flags.</p>
+                        </div>
+
+
+
+
+
+
+                        <!-------Dev Overview-->
+                        <div class="col-md-6 col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+                                <p>Network Scanner GUI was created for a class at Missouri State University. It is built using QT Creator or QMAKE on the command line. It uses C++ sockets and <a href="http://libtins.github.io/">libtins</a> to construct packets
+                                    to perform different types of network sniffing.</p>
+
+                                <br> For a complete overview of the project:
+                                <a href="/Portfolio/Resources/PDFs/NetworkScanner.pdf">View the Report</a>
+
+                            </div>
+                        </div>
+                        <!--END Dev Overview LISTING-->
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-md-6 col-12 p-hidden" id="networkGalleryParent">
+                            <!--title-gallery-fullscreen"-->
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Gallery</strong></h5>
+
+                                <div class="title-gallery" id="NetworkGallery">
+                                    <img src="" id="NetworkGalleryIMG">
+
+                                    <div class="tile-pagination" data-folder="NetworkScanner" data-imgID="NetworkGalleryIMG">
+
+                                    </div>
+
+                                    <div onclick="galleryFullscreen('networkGalleryParent');">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen gallery-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!--TAGS-->
+
+                        <div class="col-12">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

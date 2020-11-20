@@ -420,16 +420,30 @@ async function portfolioSetupGalleries() {
     ///setup expandeers
 
     const hiddens = document.getElementsByClassName("p-hidden-overlay");
-    for (var i = 0; i < hiddens.length; i++) {
+    console.log("hiddens: " + hiddens.length)
+    console.log(hiddens)
+    const totalLength = hiddens.length;
+    for (var i = 0; i < totalLength; i++) {
+
+        //really weird shit going on here. seems like hiddens is removing its elements when i remove the classlist
+        while (i >= hiddens.length) {
+            i -= 1;
+        }
+        if (i < 0) {
+            break;
+        }
+
+
         const hidden = hiddens[i];
+        console.log("setting up")
+        console.log(hidden)
         hidden.classList.remove("p-hidden-overlay")
         const overlayer = hidden.parentElement;
-        console.log(overlayer);
+
 
         const showChildren = overlayer.getElementsByClassName("p-hidden");
 
-        console.log("show children: " + showChildren.length)
-        console.log(showChildren)
+
         if (showChildren.length > 0) {
 
             //show overlay on hover
@@ -470,7 +484,7 @@ async function portfolioSetupGalleries() {
                         break;
                     }
                     const el = showChildren[x];
-                    console.log(el.innerHTML);
+
                     el.classList.remove("p-hidden");
                 }
 
