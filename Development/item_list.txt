@@ -5,6 +5,7 @@ Plannnig: Planned out databse. App architecture. App requirements.
 Created data structures. Printed everything out to constantly view and it every day. 
 Completely architected before starting.
 Dev:
+Node.js
 
 AuxKing
 
