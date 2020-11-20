@@ -170,10 +170,12 @@ function filterSkills(filter) {
 
     //otherwise, loop through all skills and if that skill doesnt contain search query then hide it
     //note: database we may want to add tags to each skill to popup in a search
+
     for (const [key, value] of Object.entries(skills)) {
         const originalSkill = key;
         const skill = String(key).toLocaleLowerCase();
         if (skill.indexOf(filter) != -1) {
+
             setSkillBig(document.getElementById(originalSkill), true)
 
             continue;
@@ -197,6 +199,46 @@ function filterSkills(filter) {
         setSkillEnabled(document.getElementById(originalSkill), false);
     }
     //also remove capitalizations
+
+
+
+    ///now we need to filter visible items
+    //get all skills
+    const allSkills = document.getElementsByClassName("skill");
+    var enabledSkills = [];
+    for (const s of allSkills) {
+        if (s.classList.contains("skill-big") || s.classList.contains("skill-enabled")) {
+            enabledSkills.push(s.id);
+        }
+    }
+
+    //get all portfolio tiles and enable all of them
+    const ports = document.getElementsByClassName("portfolio-tile");
+    for (const port of ports) {
+        const itemId = port.id.replace("id_", "");
+
+        const pskills = portfolioItems["id_" + itemId].skills;
+
+
+
+        var found = false;
+        for (const enabledSkill of enabledSkills) {
+
+            if (pskills.includes(enabledSkill)) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            port.classList.remove("d-none");
+        } else {
+            port.classList.add("d-none");
+        }
+
+    }
+
+
 }
 
 

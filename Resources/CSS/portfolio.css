@@ -255,3 +255,8 @@ div[class^="col-"] {
 .card {
     position: relative;
 }
+
+.tile-skills-list span {
+    margin-left: 4px;
+    margin-right: 4px;
+}
