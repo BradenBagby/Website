@@ -64,6 +64,7 @@ function setupListeners() {
     const search = document.getElementById('skillSearch');
     search.addEventListener('input', function(evt) {
         filterSkills(this.value);
+        filterItems();
     });
 
     const custom = document.getElementById('custom-search');
@@ -125,6 +126,7 @@ function clickedSkill(e) {
     console.log("clicked skill: " + id);
 
     setSkillEnabled(skill, !enabled);
+    filterItems();
 }
 
 
@@ -136,6 +138,7 @@ function setAllSkills(on) {
         setSkillEnabled(skill, on);
         setSkillBig(skill, false);
     }
+    filterItems();
 }
 
 function setSkillEnabled(skill, enabled) {
@@ -202,6 +205,14 @@ function filterSkills(filter) {
 
 
 
+
+
+}
+
+function filterItems() {
+
+
+
     ///now we need to filter visible items
     //get all skills
     const allSkills = document.getElementsByClassName("skill");
@@ -211,6 +222,8 @@ function filterSkills(filter) {
             enabledSkills.push(s.id);
         }
     }
+
+
 
     //get all portfolio tiles and enable all of them
     const ports = document.getElementsByClassName("portfolio-tile");
@@ -237,8 +250,6 @@ function filterSkills(filter) {
         }
 
     }
-
-
 }
 
 
