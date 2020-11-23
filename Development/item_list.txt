@@ -1,4 +1,4 @@
-TheMove
+TheMove - DONE
 
 bavckgorund: The Move LLC comapany started by me and 3 friends. Sole developer
 Plannnig: Planned out databse. App architecture. App requirements. 
@@ -13,10 +13,14 @@ InstagramClone (finish this)
 
 Chip Chomp
 
-Network Scanner C++ GUI
+Network Scanner C++ GUI - DONE
 
 Scinomix Expenses App
     Flutter + Admin Web App
+
+    Custom in-house Android and iOS application for Scinomix to log company expenses. Admin web app for designated employees to manage and create expense reports.
+    TODO: get picture of web app
+
 
 Update .Net DBA App
 

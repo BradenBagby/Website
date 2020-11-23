@@ -447,7 +447,9 @@ async function portfolioSetupGalleries() {
             const galleryFolder = gallery.getAttribute('data-folder');
             const imageID = gallery.getAttribute('data-imgID');
 
-            var response = await fetch('/API/QUERIES/PORTFOLIO/getGallery.php?folder=' + galleryFolder);
+            const galURL = '/API/QUERIES/PORTFOLIO/getGallery.php?folder=' + galleryFolder;
+            console.log(galURL)
+            var response = await fetch(galURL);
             var json = await response.json();
             if (json == null || json.length < 1) {
                 return;
