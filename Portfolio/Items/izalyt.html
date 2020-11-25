@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="./Resources/CSS/main.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="#">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_8-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">iZaLyt</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+
+                        <!--DEV OVERVIEW-->
+                        <div class="col-12">
+
+
+
+
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+
+                                <p class="card-text"> Lead Developer for iOS/Android/AppleWatch App. Connects over Bluetooth LTE to iZaLyt product sold by Jamtek. Allows you to sync Spotify music to lights using FFT. Create alarms, change colors, set presets, create patterns,
+                                    add passcode, and more! Written in Swift and Java separately for iOS and Android.
+
+
+                                </p>
+
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#izalytDevOverview" aria-expanded="false" aria-controls="izalytDevOverview">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="izalytDevOverview">
+
+                                    <p>
+                                        <strong>Background:</strong><br> iZaLyt are bluetooth LED lights crated by Jamtek. I was hired to develop the mobile application to use their bluetooth protocol for control. I wrote the iOS/watchOS Swift app from
+                                        scratch and the Android Java app from almost scratch.
+                                        <br>
+                                        <br>
+
+                                        <br>
+                                        <br>
+                                        <strong>Development:</strong><br> App written in Swift for iOS and Java for Android.
+                                        <br><br>Most complicated part of development was using FFT to sync the lights to music. App allows you to login to your Spotify account and search songs or playslist. A full audio player is built within the app.
+                                        Once a song is playing, FFT is done to discover the frequency bands of the song. Different modes and options can be set by the user, but by default low frequency is red, mid is green, and high frequenceies are blue.
+                                        This allows the lights to sync to your music library. Other modes are available that change the way colors are calculated to create different vibes.
+                                        <br><br> App allows you to create a passcode for your light, configure patterns in the pattern customizer, create and save alarms, etc. The color wheel allows you to select any color for your light and the preset
+                                        bar allows you to save colors. You can change the brightness and cool/hot values. Create and rename zones to control multiple selected lights at a time.
+                                        <br>
+                                        <br> Finally, the app includes an entire app walkthrough. Split up by sections, select which area you need help in. This will bring you the the section of the app that performs this functionality and show you how
+                                        to do it. Walkthrough is turned on when first opening the app.
+
+                                        <br>
+                                        <br>
+                                        <strong>Demonstration: </strong>
+
+                                        <p>Apple Watch:
+
+                                        </p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mQQxCmuolN0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <br>
+                                        <p>iPad:</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/B21D4Luw0ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <br>
+                                        <p>In App View: </p>
+                                        <img src="/Portfolio/Resources/Images/izalyt/overview.gif">
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--END DEV OVERVIEW-->
+
+
+
+
+                        <!-------APPSTORE LISTING-->
+                        <div class="col-md-6 col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>AppStore Listing</strong></h5>
+                                <p class="card-text"> Elevate your decor, indoors and outdoors. From subtle and contemporary to a color-changing light party! </p>
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#izalytAppstoreInfo" aria-expanded="false" aria-controls="izalytAppstoreInfo">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="izalytAppstoreInfo">
+
+                                    <p>Light your deck, patio, or pool area for a dramatic effect the neighbors will envy. Create classic accent lighting or take the color-changing party outside. The LED strips and smart controller are weather resistant!
+                                        Set the mood in any room, programmable to time of day. Or use the music-sync feature for a color-changing light party. No internet connection. No complex wiring. It’s DIY, plug-and-play! Customize your motorcycle,
+                                        RV, or boat. Ride your bike with friends and create a color-synced light show — perfect for parades! Or, got a band? Izalyt will take your stage presence to another level. Sync lights to music! Watch the lights
+                                        change colors along to your favorite songs, whether you're listening to slow country or upbeat hip-hop.
+
+
+                                        <br>
+                                        <br>
+
+
+                                        <strong>Features:</strong>
+                                        <br> -DIY friendly with easy-to-install Plug & Play simplicity
+                                        <br> -Bluetooth Smart means seamless bluetooth connectivity
+                                        <br> -No remote necessary! Control via the free App on your phone or tablet
+                                        <br> -No internet connection required!
+                                        <br> -Control MULTIPLE Light strips from ONE point
+                                        <br> -Use outdoors
+                                        <br> -Color-changing lights
+                                        <br> -Sync lights to Spotify Music (requires Spotify Premium)
+                                        <br> -Timers & patterns for your mood
+                                        <br> -Made in America!
+                                        <br> -2-year replacement warranty
+                                        <br> -Create and configure zones to control only select iZaLyts
+                                        <br> -Add a security password to keep your iZaLyt our own
+                                        <br> -Sync lights to Music!
+                                        <br><br> This app works with the iZaLyt product sold by Jamtek
+                                    </p>
+
+                                    <a href="https://apps.apple.com/us/app/izalyts/id1286884220" class="btn btn-primary">View In Appstore</a>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                        <!--END APPSTORE LISTING-->
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-md-6 col-12 p-hidden" id="izalytGalleryParent">
+                            <!--title-gallery-fullscreen"-->
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Gallery</strong></h5>
+
+                                <div class="title-gallery" id="izalytGallery">
+                                    <img src="" id="izalytGalleryIMG">
+
+                                    <div class="tile-pagination" data-folder="izalyt" data-imgID="izalytGalleryIMG">
+
+                                    </div>
+
+                                    <div onclick="galleryFullscreen('izalytGalleryParent');">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen gallery-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
