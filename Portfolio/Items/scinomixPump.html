@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="./Resources/CSS/main.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="#">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_5-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">Pump Controller - Scinomix</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+
+                        <div class="col-12">
+
+                            <p>Software to control Scinomix Pump. Keeps track of current state and saved configurations. UDP protocol and REST API to start/stop and configure pump. Written in C++ and Node.js and runs on Beaglebone. Web app written in React
+                                to allow user to configure/run pump from a browswer.
+                        </div>
+
+
+
+
+
+
+                        <!-------Dev Overview-->
+                        <div class="col-md-6 col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+                                <p>
+                                    Pump application runs C++ and Node.js program at startup of Linux OS. C++ program listens for UDP commands to start/stop and configure pump. Node.js program consumes REST requests to start/stop and configure pump. Node.js connects to C++ using native
+                                    addons with N-API. Node.js REST API uses basic auth with JSON web tokens. Web app made with React js to allow user to log in, configure, and start pump from local web app. Web app uses the REST API and requires authentication.
+                                    Can be configured to use HTTP or HTTPS. Wrote documentation outlining protocols, architecture, etc.
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <!--END Dev Overview LISTING-->
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-md-6 col-12 p-hidden" id="pumpGalleryParent">
+                            <!--title-gallery-fullscreen"-->
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Gallery</strong></h5>
+
+                                <div class="title-gallery" id="pumpGallery">
+                                    <img src="" id="pumpGalleryIMG">
+
+                                    <div class="tile-pagination" data-folder="Pump" data-imgID="pumpGalleryIMG">
+
+                                    </div>
+
+                                    <div onclick="galleryFullscreen('pumpGalleryParent');">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen gallery-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

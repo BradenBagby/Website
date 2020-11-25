@@ -42,7 +42,11 @@ Wordpress Website
 
 Sonicator Machine updates
 
-Pump REST API
+Pump C++ UDP Protocol + REST API:
+Scinomix Pump Controller; 
+Software to control Scinomix Pump. Keeps track of current state and saved configurations. UDP protocol to start/stop and configure pump. REST API to start/stop and configure pump. Written in C++ and runs on Beaglebone. 
+
+    Allows control of Scinomix pump using REST APi. Built on top of current UDP protocol.
 
 LIMS system
 
