@@ -475,8 +475,7 @@ async function portfolioSetupGalleries() {
     ///setup expandeers
 
     const hiddens = document.getElementsByClassName("p-hidden-overlay");
-    console.log("hiddens: " + hiddens.length)
-    console.log(hiddens)
+
     const totalLength = hiddens.length;
     for (var i = 0; i < totalLength; i++) {
 
@@ -490,8 +489,7 @@ async function portfolioSetupGalleries() {
 
 
         const hidden = hiddens[i];
-        console.log("setting up")
-        console.log(hidden)
+
         hidden.classList.remove("p-hidden-overlay")
         const overlayer = hidden.parentElement;
 

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="./Resources/CSS/main.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="#">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_9-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">Sign Language Smart Home Control</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <p style="margin-left:20px;margin-right:20px;">
+                            Class project for Missouri State University. Perform signs in front of web cam to spell a command and control a smart home device. Used machine learning and Google's Mediapipe framework to predict gestures in real time. (14 ASL signs supported)
+                        </p>
+
+
+                        <!--DEV OVERVIEW-->
+                        <div class="col-12">
+
+
+
+
+
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+                                Software is split into 4 components: Client Server, Modified MediaPipe, Gesture Interpreter, and the Formar Grammar Module component. Used UDP to stream video to server, detects points on hand using Mediapipe framework, uses those pionts to predict a
+                                gesture in our trained model, does grammar correction, and performs the command if it is in our library of commands.
+                                <p class="card-text">
+
+
+
+                                </p>
+
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#signLanguageDevOverview" aria-expanded="false" aria-controls="signLanguageDevOverview">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="signLanguageDevOverview">
+
+                                    <p>
+                                        <strong>Background:</strong><br> Class project for Missouri State University's 450 Software Development class. Project done with 5 team members total, using Agile Scrum with 2 week sprints. Involved Python, C++
+                                        programming, UDP + TCP, threading, Tensorflow and machine learning. Project was mostly completed with 14 different ASL detectable signs and a %98.3 accuracy. Project only runs on Ubuntu and requires a graphics card.
+
+                                        <br>
+                                        <br>
+                                        <strong>Architecture:</strong><br> Our design involves 4 main components: <br>
+                                        <img src="Portfolio/Resources/Images/SignLanguage/ComponentsOverview.png">
+
+                                        <br> Client Server Component:
+                                        <ul>
+                                            <li>Client reads webcam sends over UDP</li>
+                                            <li>Server receives UDP and reconstructs frames</li>
+                                            <li>Sends to MediaPipe over local TCP (Python to C++ IPC)</li>
+                                        </ul>
+                                        <br> Modified MediaPipe Component:
+                                        <ul>
+                                            <li>Listens for JPEG image over TCP</li>
+                                            <li>Uses MediaPipe (google framework) to detect landmarks​</li>
+                                            <li>Outputs landmarks over TCP</li>
+                                        </ul>
+                                        <br> Gesture Interpreter Component:
+                                        <ul>
+                                            <li>Receives landmark input ​</li>
+                                            <li>Predicts gesture using trained model</li>
+                                            <li>Records gesture until timeout to form words</li>
+                                        </ul>
+                                        <br> Formar Grammar Module Component:
+                                        <ul>
+                                            <li>Receives input of words</li>
+                                            <li>Autocorrects and fixes grammar</li>
+                                            <li>Calls smart home REST API</li>
+                                        </ul>
+                                        <br> More in depth view: <br>
+                                        <img src="Portfolio/Resources/Images/SignLanguage/ComponentsDepth.png">
+                                        <br>
+                                        <br>
+                                        <strong>Development:</strong><br> Development required multiple steps:
+                                        <ol>
+                                            <li>Prepare Dataset</li>
+                                            <li>Train Model</li>
+                                            <li>Build System</li>
+                                        </ol>
+
+                                        <br>
+                                        <u>Prepare Dataset:</u> <br> We obtained a <a href="https://www.kaggle.com/grassknoted/asl-alphabet">dataset from Kaggle</a> containing images of ASL sign language hand gestures. We modified Google's MediaPipe framework
+                                        to work with an input of an image and output a CSV file of the 21 detected points on any hand contained in the image. We ran this on the entire image dataset to create a corresponding dataset of CSV files containing
+                                        hand coordinate data instead of hand image data.<br>
+                                        <img src="Portfolio/Resources/Images/SignLanguage/DatasetVisualized.png" style="max-width:300px;"><br> This figure shows an image from the dataset with its 21 detected points graphed over it. The points are not
+                                        supposed to lie on the hand image but rather are normalized to the bounding box around the hand. We manually went through and removed outlier data from blurry photos, bad lighting, etc.
+
+                                        <br>
+                                        <br>
+                                        <u>Train Model:</u><br> Using the dataset of coordinates we trained a model using a Convolutional Nueral Network with Tensorflow and an input shape of 5x5x3 by grouping the 21 points by finger and 3D coordinate
+                                        . Our model predicts 14 different signs with a %98.3 accuracy. <br> Tensorflow Architecture:<br>
+                                        <img src="Portfolio/Resources/Images/SignLanguage/architecture.png">
+                                        <br>
+                                        <br>
+                                        <u>Build System</u> <br> Building the system was straight forward development. We used python to create UDP video stream, C++ to modify MediaPipe to receive its input over TCP and output over TCP, and Python once
+                                        again to classify that output. We wrote install scripts to help get any new user setup and we documented everything.
+
+                                        <br><br>
+                                        <strong>My Contribution:</strong><br> Though all team members put in work, here is my personal contribution list:<br>
+                                        <ul>
+                                            <li>customized mediapipe to accept TCP image as input and output TCP landmarks</li>
+                                            <li> created python process to use model to predict letter of detected landmarks, and keep track of current predicted word</li>
+                                            <li> helped on training model</li>
+                                            <li> created mediapipe customization binary and python process to convert image dataset to landmark csv dataset</li>
+                                            <li> create python process to manually visualize dataset and removed bad data</li>
+                                            <li> setup Amazon web services (unused)</li>
+                                            <li> created server installer and run script</li>
+                                            <li> organized, cleaned github, and created readmes</li>
+                                            <li> created demonstration videos, edited </li>
+                                            <li>created final presentation</li>
+                                            <li>Testend and ran entire project on my ubuntu with graphics card</li>
+                                            <li>installed entire project on MSU computer</li>
+                                            <li>Connected final modules together to configure final project</li>
+                                            <li>created client install and run scripts for linux</li>
+                                            <li>Finalized project and testing. Only teammeber able to actually run entire project (becase requires Ubuntu with graphics card)</li>
+                                        </ul>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--END DEV OVERVIEW-->
+
+
+
+
+
+
+                        <!-------Demos-->
+                        <div class="col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Demos</strong></h5>
+                                <p class="card-text"> Demonstration Videos of the software in action. Signs included: 'A','B','C','D','E','F','H','I','K','L','O','P','Q','W'. </p>
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#signLanguageAppstoreInfo" aria-expanded="false" aria-controls="signLanguageAppstoreInfo">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="signLanguageAppstoreInfo">
+
+                                    This video shows whole system in action. Sign 'Idea' to turn on light and 'Black' to turn light off. See terminal in bottom right for output of current readings.<br>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SfzaRuzIsD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                    <br><br> This video shows spelling out Hi Iqbal to our professor, Dr. Iqbal. <br>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pjP36tcUtyw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <!--END Demos-->
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-md-6 col-12 p-hidden" id="signLanguageGalleryParent">
+                            <!--title-gallery-fullscreen"-->
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Gallery</strong></h5>
+
+                                <div class="title-gallery" id="signLanguageGallery">
+                                    <img src="" id="signLanguageGalleryIMG">
+
+                                    <div class="tile-pagination" data-folder="SignLanguage" data-imgID="signLanguageGalleryIMG">
+
+                                    </div>
+
+                                    <div onclick="galleryFullscreen('signLanguageGalleryParent');">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen gallery-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!-------Documents-->
+                        <div class="col-md-6 col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Documents</strong></h5>
+                                <a href="Portfolio/Resources/PDFs/ResearchPaper.pdf" target="_blank">Research Paper</a><br>
+                                <a href="Portfolio/Resources/PDFs/Group5_SRS.pdf" target="_blank">Software Requirements Specification</a><br>
+                                <a href="Portfolio/Resources/PDFs/SE-450-SDD.pdf" target="_blank">Software Design Description</a><br>
+                                <a href="Portfolio/Resources/PDFs/QualityAssuranceReport.pdf" target="_blank">Quality Assurance Report</a><br>
+                                <a href="Portfolio/Resources/PDFs/ProjectCharter.pdf" target="_blank">Project Charter</a><br>
+
+
+                            </div>
+                        </div>
+
+                        <!--END Documents-->
+
+
+                        <div class='col-12 p-hidden'>
+                            <a href="https://github.com/BradenBagby/Sign-Language-Smart-Home-Control" class="btn btn-primary" style="width:100%;display:block" target="_blank">View On Github</a>
+                        </div>
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

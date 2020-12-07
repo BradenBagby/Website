@@ -9,6 +9,10 @@ Node.js
 
 AuxKing
 
+Data Mining custom jupyter notebook stuff
+KNN and Perceptron
+
+
 InstagramClone (finish this)
 
 Chip Chomp
