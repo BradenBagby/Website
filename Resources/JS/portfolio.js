@@ -1,4 +1,5 @@
 var skills = {};
+var firstClick = true;
 
 window.addEventListener('DOMContentLoaded', async(event) => {
 
@@ -120,6 +121,14 @@ function flipAll(actually) {
 }
 
 function clickedSkill(e) {
+
+    //first click we want to select the click
+    if (firstClick) {
+        console.log("first click");
+        setAllSkills(false);
+        firstClick = false;
+    }
+
     const skill = this;
     const id = skill.id;
     const enabled = skill.classList.contains("skill-enabled");
