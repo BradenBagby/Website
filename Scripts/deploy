@@ -1,3 +1,7 @@
  #!/bin/bash 
- 
+
+
+ pass=$( cat /Users/bradenbagby/Development/Website/db_pwd.txt )
+ sed -i '' -e 's/DATABASE_PASSWORD/'$pass'/g' API/QUERIES/connect.php
  rsync -alPvz --exclude=Scripts ./ u101968360@access840382042.webspace-data.io:bradenbagby.com --delete
+ sed -i '' -e 's/'$pass'/DATABASE_PASSWORD/g' API/QUERIES/connect.php

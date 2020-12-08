@@ -9,7 +9,7 @@ function connect(){
 $host_name = 'db5001055811.hosting-data.io';
 $database = 'dbs909718';
 $user_name = 'dbu161884';
-$password = '122333BradenPortfolioYayoo!';
+$password = 'DATABASE_PASSWORD';
 
 $conn = new mysqli($host_name, $user_name, $password, $database);
 

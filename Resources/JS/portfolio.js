@@ -385,6 +385,7 @@ function galleryElement(size, folder, id) {
     next.classList.add("page-item");
     const a = document.createElement("a");
     a.classList.add("page-link");
+
     a.innerHTML = "Next";
     a.addEventListener("click", function() { nextPage(id, folder, null, true); });
     next.appendChild(a);
