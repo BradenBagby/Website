@@ -25,8 +25,13 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     await updatePortfolioUI();
     await portfolioSetupGalleries();
 
+    setAllSkills(false);
+
     //setup click skill listener
     setupListeners();
+
+    //now reveal everythin and remove loader
+    showWhenDoneLoading()
 
 
 });
@@ -177,6 +182,7 @@ function filterSkills(filter) {
 
     //now if filter is nothing, end
     if (filter == null || filter == "") {
+        setAllSkills(false); //default to nothing now
         return;
     }
 
@@ -559,6 +565,19 @@ async function portfolioSetupGalleries() {
     }
 }
 
+function showWhenDoneLoading() {
+    const loader = document.getElementById("loaderElement"); //remove loadr
+
+    if (loader != null) {
+        loader.classList.remove("loader");
+        loader.innerHTML = "";
+        document.getElementById("portfolio-tiles").classList.remove("d-none");
+        document.getElementById("skillsList").classList.remove("d-none");
+    }
+
+
+}
+
 async function updatePortfolioUI() {
     const enabledSkills = getSelectedSkills();
 
@@ -587,6 +606,7 @@ async function updatePortfolioUI() {
         } else {
             // console.log("not showing: " + portfolio_id + " - " + portfolio.name)
         }
+
 
 
 
