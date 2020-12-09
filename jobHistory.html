@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!--Bootstrap <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="./Resources/CSS/main.css">
+<link rel="stylesheet" href="./Resources/CSS/jobHistory.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+<head>
+
+</head>
+
+<body>
+
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="#">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="jobHistory.html">Job History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+
+        <div class="jh-header">
+            <div class="row">
+
+                <div class="col-4">
+                    Company
+                </div>
+                <div class="col-4">
+                    Title
+                </div>
+
+                <div class="col-4">
+                    Date
+                </div>
+            </div>
+
+        </div>
+
+        <div class="jobHistoryContainer">
+
+            <div id="accordion">
+
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                 
+                   <div class="row">
+                    <div class="col-4 jh-company">
+                        O'Reilly Auto Parts
+                    </div>
+                    <div class="col-4 jh-title">
+                        Junior Software Developer - Core Tech Team
+                    </div>
+                    <div class="col-4 jh-date">
+                        8/2020 - Present
+                    </div>
+                   </div>
+
+                  </button>
+
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                             
+                               <div class="row">
+                                <div class="col-4 jh-company">
+                                    Scinomix
+                                </div>
+                                <div class="col-4 jh-title">
+                                   Intern
+                                </div>
+                                <div class="col-4 jh-date">
+                                    5/2017 - Present
+                                </div>
+                               </div>
+            
+                              </button>
+
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+                             
+                               <div class="row">
+                                <div class="col-4 jh-company">
+                                    The Move LLC
+                                </div>
+                                <div class="col-4 jh-title">
+                                    Co-Founder / Lead Developer
+                                </div>
+                                <div class="col-4 jh-date">
+                                    10/2019 - Present
+                                </div>
+                               </div>
+            
+                              </button>
+
+                    </div>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#callapseFive" aria-expanded="true" aria-controls="collapseThree">
+                             
+                               <div class="row">
+                                <div class="col-4 jh-company">
+                                    Desi Rides LLC
+                                </div>
+                                <div class="col-4 jh-title">
+                                    Co-Founder / Lead Developer
+                                </div>
+                                <div class="col-4 jh-date">
+                                    8/2019 - Present
+                                </div>
+                               </div>
+            
+                              </button>
+
+                    </div>
+
+                    <div id="callapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+
+
+
+
+
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                             
+                               <div class="row">
+                                <div class="col-4 jh-company">
+                                    Jamtek
+                                </div>
+                                <div class="col-4 jh-title">
+                                    Intern
+                                </div>
+                                <div class="col-4 jh-date">
+                                    5/2017 - 2019
+                                </div>
+                               </div>
+            
+                              </button>
+
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+                <!---START CARD-->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <button class="btn btn-full" data-toggle="collapse" data-target="#collapsegolfTrax" aria-expanded="true" aria-controls="collapseThree">
+                                 
+                                   <div class="row">
+                                    <div class="col-4 jh-company">
+                                        Golf Trax LLC
+                                    </div>
+                                    <div class="col-4 jh-title">
+                                        Co-Founder / Lead Developer
+                                    </div>
+                                    <div class="col-4 jh-date">
+                                        8/2016 - 2018
+                                    </div>
+                                   </div>
+                
+                                  </button>
+
+                    </div>
+
+                    <div id="collapsegolfTrax" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            coming soon
+                        </div>
+                    </div>
+                </div>
+                <!--END CARD-->
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

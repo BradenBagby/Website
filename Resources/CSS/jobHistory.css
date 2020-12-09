@@ -1,0 +1,25 @@
+.jobHistoryContainer {
+    margin-top: 15px;
+}
+
+.btn-full {
+    width: 100%;
+    display: inline;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: black;
+}
+
+.jh-date,
+.jh-title {
+    font-weight: bold;
+    color: #0000008c;
+}
+
+.jh-header {
+    margin: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    font-weight: 900;
+}
