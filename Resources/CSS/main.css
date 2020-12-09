@@ -2,13 +2,23 @@
 
 :root {
     --dark: #343a40;
+    --black: #000000;
+    --gray: #212121;
+    --gray2: #303030;
+    --gray3: #424242;
+    --primary-text: #ffffff;
+    --secondary-text: rgba(255, 255, 255, 0.7);
+    --secondary-text: rgba(255, 255, 255, 0.7);
+    --hint-text: rgba(255, 255, 255, 0.5);
 }
 
 
 /*big stuff*/
 
 body {
-    background-color: var(--dark);
+    background-color: #00000059;
+    /*var(--dark);*/
+    ;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
