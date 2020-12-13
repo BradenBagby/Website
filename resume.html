@@ -8,14 +8,14 @@
 
 
 <!--Main Stylesheet-->
-<link rel="stylesheet" href="./resume.css">
+<link rel="stylesheet" href="Resources/CSS/resume.css">
 
 
 <!--FONT-->
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<script src="Resources/JS/resume.js"></script>
 
 <body>
 
@@ -81,7 +81,9 @@
                 <br> GPA: 3.86<br> Board of Governors Scholarship<br> Deans List all Semesters<br>
                 <br>
                 <br>
-                <h1 class='title'>Skills</h1>
+                <a href="index.html">
+                    <h1 class='title'>Skills</h1>
+                </a>
 
                 C/C++<br> Embedded Systems / Linux<br> Python + Data Analysis<br> Java/Kotlin + Android Dev<br> Swift + iOS Dev<br> Html/CSS/Javascript
 
@@ -113,12 +115,19 @@
                             <h3 class='subInfo'>Scinomix / May 2017 - current / Earth City</h3>
 
                             <ul class="infoList">
+
                                 <li>Programmed automated machine that sorts medical tubes, communicating with motors over serial, with remote control web app using PHP and C++ sockets (Beaglebone, Boost, QT, Linux)</li>
-                                <li>Wrote C++ Serial Controller for Scinomix Pump. Keeps track of current state and saved configurations. UDP and TCP protocol + REST API to start/stop and configure pump. Written in C++ and runs on Beaglebone linux OS. Created
-                                    Vue.js web app for clients to configure pump.
-                                </li>
-                                <li>Custom in-house expense management mobile iOS/Android app using Flutter with Admin capability web app.</li>
-                                <li>Manage Scinomix.com website and created intranet for company</li>
+                                <a href="Portfolio/Items/scinomixPump.html">
+                                    <li>Wrote C++ Serial Controller for Scinomix Pump. Keeps track of current state and saved configurations. UDP and TCP protocol + REST API to start/stop and configure pump. Written in C++ and runs on Beaglebone linux OS.
+                                        Created Vue.js web app for clients to configure pump.
+                                    </li>
+                                </a>
+                                <a href="Portfolio/Items/expenseApp.html">
+                                    <li>Custom in-house expense management mobile iOS/Android app using Flutter with Admin capability web app.</li>
+                                </a>
+                                <a href="Portfolio/Items/wordpressScinomix.html">
+                                    <li>Manage Scinomix.com website and created intranet for company</li>
+                                </a>
                             </ul>
                         </div>
                         <!------END------>
@@ -147,7 +156,9 @@
                             <h3 class='subInfo'>JamTek Inc / May 2018 - August 2019 / Earth City</h3>
 
                             <ul class="infoList">
-                                <li>Developed iOS (Swift) and Android (Java) application. Uses Bluetooth LE to control iZaLyt LED lights</li>
+                                <a href="Portfolio/Items/izalyt.html">
+                                    <li>Developed iOS (Swift) and Android (Java) application. Uses Bluetooth LE to control iZaLyt LED lights</li>
+                                </a>
                                 <li>Used Fast Fourier Transform (FFT) to allow user to sync LED light colors to Spotify music. Wrote custom algorithm using FFT to allow selection of different effects and used Spotify API to access users library.
                                 </li>
 
@@ -156,18 +167,23 @@
                         <!------END------>
 
                         <!------START------>
+
                         <div class="item">
 
                             <h2 class='info'>Co-Founder - Lead Developer</h2>
                             <h3 class='subInfo'>The Move LLC / August 2019 - current / Springfield, MO</h3>
 
                             <ul class="infoList">
-                                <li>Lead/Sole developer. Developed fully functioning social media app. Create Moves. See where friends are going. Update Profile. Manage Friends, Messaging, Notifications, Firebase real time DB, Flutter, Google Maps, IAP, DB
-                                    Security, iOS + Android. Upload stories. Manage business.</li>
+                                <a href="Portfolio/Items/themove.html">
+                                    <li>Lead/Sole developer. Developed fully functioning social media app. Create Moves. See where friends are going. Update Profile. Manage Friends, Messaging, Notifications, Firebase real time DB, Flutter, Google Maps, IAP,
+                                        DB Security, iOS + Android. Upload stories. Manage business.</li>
+                                </a>
                                 <li>Designed back end and app architecture. Worked with team of 3 to design MVP and UI for app. App made with Flutter, backend with Node.js
                                 </li>
                             </ul>
+
                         </div>
+                        </a>
                         <!------END------>
 
 
@@ -180,42 +196,46 @@
                         <!------START------>
                         <div class="item">
 
-                            <h2 class='info'>Machine Learning - Sign Language</h2>
+                            <a href="Portfolio/Items/signLanguage.html">
+                                <h2 class='info'>Machine Learning - Sign Language</h2>
 
 
-                            <ul class="infoList">
-                                <li>Perform signs in front of web cam to spell a command and control a smart home device. Used machine learning (Tensorflow) and Google's Mediapipe framework to predict gestures in real time. (14 ASL signs supported)</li>
+                                <ul class="infoList">
+                                    <li>Perform signs in front of web cam to spell a command and control a smart home device. Used machine learning (Tensorflow) and Google's Mediapipe framework to predict gestures in real time. (14 ASL signs supported)</li>
 
-                            </ul>
+                                </ul>
+                            </a>
                         </div>
                         <!------END------>
 
                         <!------START------>
                         <div class="item">
-
-                            <h2 class='info'>Network Scanner C++ GUI</h2>
-
-
-                            <ul class="infoList">
-                                <li>Network Scanner GUI allows a user to conduct scans of type: SYN, TCP HANDSHAKE, FIN, and XMAS using a graphical user interface. It also allows users to run a custom TCP packet with customized flags.</li>
+                            <a href="Portfolio/Items/networkScanner.html">
+                                <h2 class='info'>Network Scanner C++ GUI</h2>
 
 
-                            </ul>
+                                <ul class="infoList">
+                                    <li>Network Scanner GUI allows a user to conduct scans of type: SYN, TCP HANDSHAKE, FIN, and XMAS using a graphical user interface. It also allows users to run a custom TCP packet with customized flags.</li>
+
+
+                                </ul>
+                            </a>
                         </div>
                         <!------END------>
 
 
                         <!------START------>
                         <div class="item">
-
-                            <h2 class='info'>Phone Controlled Mirror Lights</h2>
-
-
-                            <ul class="infoList">
-                                <li>An infinity mirror that maps the mirror to your mobile device and allows the user to drag his/her finger to light up areas corresponding to his/her touch</li>
+                            <a href="Portfolio/Items/fadeMirror.html">
+                                <h2 class='info'>Phone Controlled Mirror Lights</h2>
 
 
-                            </ul>
+                                <ul class="infoList">
+                                    <li>An infinity mirror that maps the mirror to your mobile device and allows the user to drag his/her finger to light up areas corresponding to his/her touch</li>
+
+
+                                </ul>
+                            </a>
                         </div>
                         <!------END------>
 

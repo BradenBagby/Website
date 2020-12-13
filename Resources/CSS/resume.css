@@ -82,3 +82,14 @@ body {
 .profileImage {
     vertical-align: middle;
 }
+
+a {
+    color: black;
+    transition: color 1s ease-in-out;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+a:hover {
+    transition: color 0.1s ease;
+}
