@@ -1,0 +1,84 @@
+body {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-variant: normal;
+}
+
+.title {
+    font-size: .198in;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.info {
+    font-size: .198in;
+}
+
+.subInfo {
+    font-size: .153in;
+}
+
+.infoList {
+    font-size: .140in;
+    padding-left: 1in;
+}
+
+.mainArea {
+    padding: 16px;
+}
+
+.smallText {
+    font-size: .140in;
+}
+
+.sideArea {
+    padding: 16px;
+    text-align: right;
+    border-right: 2px solid orange;
+    font-size: .135in;
+}
+
+.contact {
+    text-align: right;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: .4in;
+}
+
+.header h2 {
+    font-size: .3in;
+}
+
+body {
+    padding: 8px;
+}
+
+.overview {
+    margin: 16px;
+}
+
+.frame {
+    height: 100%;
+    /* Equals maximum image height */
+    width: 100%;
+    white-space: nowrap;
+    /* This is required unless you put the helper span closely near the img */
+    text-align: center;
+    margin: 1em 0;
+    border-right: 2px solid orange
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.profileImage {
+    vertical-align: middle;
+}
