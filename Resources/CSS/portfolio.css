@@ -141,7 +141,7 @@
     cursor: pointer;
 }
 
-div[class^="col-"] {
+.searchSkillsContainer div[class^="col-"] {
     padding: 8px;
 }
 

@@ -47,7 +47,7 @@ async function getSkills() {
 
 
 function placeSkills() {
-    const root = document.getElementById("skillsList");
+    const skillsList = document.getElementById("skillsList");
     skillsList.innerHTML = "";
     for (const [key, value] of Object.entries(skills)) {
         const newSkillElement = skillElement(key);

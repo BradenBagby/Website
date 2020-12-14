@@ -22,17 +22,13 @@ body {
     padding-left: 1in;
 }
 
-.mainArea {
-    padding: 16px !important;
-    padding-top: 8px !important;
-}
+.mainArea {}
 
 .smallText {
     font-size: .140in;
 }
 
 .sideArea {
-    padding: 16px !important;
     text-align: right;
     border-right: 2px solid orange;
     font-size: .135in;
@@ -114,9 +110,24 @@ a:hover {
     background-color: rgb(150, 150, 150);
 }
 
+.website {
+    display: none;
+}
+
 @media print {
     .no-print,
     .no-print * {
         display: none !important;
+    }
+    a {
+        text-decoration: none !important;
+        color: initial;
+    }
+    a:hover {
+        text-decoration: none !important;
+        color: initial;
+    }
+    .website {
+        display: block;
     }
 }
