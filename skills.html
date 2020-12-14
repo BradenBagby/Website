@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!--Bootstrap <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="./Resources/CSS/main.css">
+    <link rel="stylesheet" href="./Resources/CSS/portfolio.css">
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+
+
+    <title>Portfolio</title>
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="#">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="skills">
+
+        <h1>Search Skill</h1>
+        <hr>
+
+
+        <!--Search Skill-->
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="skillSearch">
+        <div class="search-btn-holder">
+
+            <span class="search-btn" id="custom-search">
+                All
+            </span>
+        </div>
+
+        <!--Skills should be multi select-->
+
+        <div class="skillsList d-none" id="skillsList">
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill skill-enabled">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+            <div class="skill">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <span>iOS Development</span>
+            </div>
+            <div class="skill">
+                <span>Flutter</span>
+            </div>
+            <div class="skill">
+                <span>Linux</span>
+            </div>
+            <div class="skill">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <span>Embedded Systems</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid content">
+
+
+        <div class="row d-none" id="portfolio-tiles">
+
+        </div>
+        <div class="loader" id="loaderElement">Loading...</div>
+
+    </div>
+
+
+    <script src="Resources/JS/portfolio.js"></script>
+
+</body>
+
+</html>

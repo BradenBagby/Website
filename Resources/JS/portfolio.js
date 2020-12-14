@@ -129,6 +129,9 @@ function clickedSkill(e) {
 
     //first click we want to select the click
     if (firstClick) {
+        setTimeout(function() {
+            window.scrollBy(300, 300);
+        }, 200);
         console.log("first click");
         setAllSkills(false);
         firstClick = false;
