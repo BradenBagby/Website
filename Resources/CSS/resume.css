@@ -22,6 +22,11 @@ body {
     padding-left: 1in;
 }
 
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
 .mainArea {}
 
 .smallText {
@@ -130,4 +135,11 @@ a:hover {
     .website {
         display: block;
     }
+}
+
+.socialMedia {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: space-evenly;
 }
