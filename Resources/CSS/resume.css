@@ -135,6 +135,18 @@ a:hover {
     .website {
         display: block;
     }
+    .title {
+        font-size: .2156in;
+    }
+    .info {
+        font-size: .2156in;
+    }
+    .subInfo {
+        font-size: .16666in;
+    }
+    .infoList {
+        font-size: .152in;
+    }
 }
 
 .socialMedia {
