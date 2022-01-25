@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="/Resources/CSS/main.css">
+<link rel="stylesheet" href="/Resources/CSS/portfolio.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<script src="/Resources/JS/tile.js"></script>
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="/index.html">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_14-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">Flutter - Camera Plugin modification</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+
+                        <div class="col-12">
+
+                            <p><a href="https://pub.dev/packages/camera">Flutter's Camera Plugin</a> does not allow switching the camera between front/rear while recording. This is a feature that is needed and has had many <a href="https://github.com/flutter/flutter/issues/82467">requests</a>.
+                                I modified the camera plugin's native code in Java and Object-C to allow this to happen. It was not as straightforward as I had hoped.
+                                <a href="/Portfolio/Items/wavvMobile.html"></a>This was done specifically for Wavv Communication's mobile app</a>
+                            </p>
+                        </div>
+
+
+
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-12 p-hidden" id="networkGalleryParent">
+                            <a href="https://github.com/BradenBagby/plugins/tree/feature/setCamera" target="_blank" class="btn btn-primary">View On Github</a>
+                            <a href="https://github.com/flutter/flutter/issues/82467" target="_blank" class="btn btn-primary">View Pull Request</a>
+
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
