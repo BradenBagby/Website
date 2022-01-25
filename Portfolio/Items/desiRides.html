@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+<!--Bootstrap <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="/Resources/CSS/main.css">
+<link rel="stylesheet" href="/Resources/CSS/portfolio.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<script src="/Resources/JS/tile.js"></script>
+
+
+
+
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="/index.html">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_13-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">Desi Rides</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+
+                        <!--DEV OVERVIEW-->
+                        <div class="col-12">
+
+
+                            Privatized Uber written in Flutter using Firebase. Allows companies to create events, assign drivers, and send out invites. Regular users request rides just like Uber, except rides are free. Companies pay their assigned drivers separately. Useful for
+                            wedding parties and other events where sober drivers are necassary.
+
+
+                            <br><br>
+
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+
+                                <p class="card-text">Privatized ride sharing service developed using Flutter and many Google APIs. Orignally targetted Greek chapters and sober driving for its launch plan.<br>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NQ3Ia8ZnrZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                </p>
+
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#DesiRidesDevOverview" aria-expanded="false" aria-controls="DesiRidesDevOverview">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="DesiRidesDevOverview">
+
+                                    <p>
+                                        <strong>Background:</strong><br> Desi Rides (originally 'Pace Rides') is a privatized ride sharing service started by me and 2 other co-founders. Originally written in Java and Swift separately, we made the switch
+                                        to Flutter/Dart where I was the sole developer.
+
+                                        <br>
+
+
+                                        <br>
+                                        <strong>Development:</strong><br> App is written in Flutter and uses Firestore NoSQL database for real time updates and Node.js for backend. App has in app messaging, DMs beween drivers and riders. Organizations/Groups
+                                        create events and add drivers. Drivers can customize their pickup details and view queues of guests. Guests can request rides for free and be picked up by the drivers. The organization handles payments to the driver's
+                                        themselves.
+                                    </p>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--END DEV OVERVIEW-->
+
+
+
+
+                        <!-------APPSTORE LISTING-->
+                        <div class="col-md-6 col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>AppStore Listing</strong></h5>
+                                <p class="card-text"> Designated driving, made easy! </p>
+
+                                <div class="more-btn" data-toggle="collapse" data-target="#DesiRidesAppstoreInfo" aria-expanded="false" aria-controls="DesiRidesAppstoreInfo">
+                                    More
+                                </div>
+                                <div class="collapse more-info" id="DesiRidesAppstoreInfo">
+
+
+
+
+                                    Sign your Greek chapter up at https://pacerides.com <br> <br> Pace Rides is an app that facilitates designated driving among college Greek organizations. You no longer need to go through the trouble of sending out individual
+                                    names and phone numbers of your organization’s members when they are the designated drivers for the night. If you’re a driver, you no longer need to deal with overwhelming texts, phone calls, and remembering rider locations.
+                                    <br> <br> It’s easy – here’s how it works: <br>
+                                    <ul>
+                                        <li> - Create an organization </li>
+
+                                        <li> - Invite your brothers/sisters using your organization’s invite link – you are not limited to providing rides to members only. Members are those who are able to be assigned as a driver by the administrator.</li>
+
+                                        <li> - Add administrators</li>
+
+                                        <li> - Create an event. This can be anything from a party, outing, or Tuesday night.
+                                        </li>
+                                        <li> - Choose your designated drivers from your organization’s member list – drivers can be added/removed with no effect to the event.</li>
+
+                                        <li> - Distribute your events link to anyone you wish to provide rides to by tapping the share button.</li>
+
+                                        <li> - Riders simply click the event link and tap “request a ride” in the Pace Rides app. This places them in a chronological queue.</li>
+
+                                        <li> - Designated drivers simply tap “accept next rider”. This pulls them from the queue and will use the rider’s location to direct the driver to them.
+                                        </li>
+                                        <li> - Riders are notified when a driver has accepted their ride request and when the driver has arrived.</li>
+                                    </ul>
+                                    <br> Pace Rides makes designated driving easy, allowing you to let the good times roll!
+                                    <br> Follow us on Instagram: https://Instagram.com/PaceRides Like us on Facebook: https://Facebook.com/PaceRides
+
+                                    <a href="https://apps.apple.com/us/app/the-move-plan-your-night/id1509483997" class="btn btn-primary">View In Appstore</a>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                        <!--END APPSTORE LISTING-->
+
+
+
+
+                        <!--GALLARY-->
+                        <div class="col-md-6 col-12 p-hidden" id="moveGalleryParent">
+                            <!--title-gallery-fullscreen"-->
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Gallery</strong></h5>
+
+                                <div class="title-gallery" id="DesiRidesGallery">
+                                    <img src="" id="DesiRidesGalleryIMG">
+
+                                    <div class="tile-pagination" data-folder="DesiRides" data-imgID="DesiRidesGalleryIMG">
+
+                                    </div>
+
+                                    <div onclick="galleryFullscreen('moveGalleryParent');">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-fullscreen gallery-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--END GALLARY-->
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
