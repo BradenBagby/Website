@@ -330,6 +330,8 @@ function nextPage(imageID, folder, page = null, next = false) {
         //find current index
         const currentLink = imgEl.src;
 
+        console.log("current link: ", currentLink);
+
         for (var i = 0; i < items.length; i++) {
 
             //url becomes reformatted from img element 
