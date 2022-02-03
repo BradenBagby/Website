@@ -119,10 +119,25 @@ a:hover {
     display: none;
 }
 
+.print-helper {
+    width: 100%;
+    height: 30px;
+}
+
+.print-only {
+    display: none;
+}
+
 @media print {
     .no-print,
     .no-print * {
         display: none !important;
+    }
+    .print-helper {
+        height: 135px;
+    }
+    .print-only {
+        display: block !important;
     }
     a {
         text-decoration: none !important;
