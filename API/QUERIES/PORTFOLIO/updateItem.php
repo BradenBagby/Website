@@ -10,7 +10,7 @@ if (!$DEV) {
     return;
 }
 
-
+authenticate();
 
 $addSkillTag = $_GET['itemSkill']; //skillName|skillId
 $r = $_GET['remove'];

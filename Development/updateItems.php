@@ -39,6 +39,8 @@
 
 
 <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const key = urlParams.get('key');
     var portfolioItems = {};
     var skills = {};
     var items = {};
@@ -50,7 +52,7 @@
 
 
         //get all items
-        var response = await fetch('/API/QUERIES/PORTFOLIO/items.php');
+        var response = await fetch(`/API/QUERIES/PORTFOLIO/items.php?key=${key}`);
         var json = await response.json();
         portfolioItems = json;
 
@@ -93,7 +95,7 @@
         const dropdown = document.getElementById("dropdown");
 
         //get all items
-        var response = await fetch('/API/QUERIES/PORTFOLIO/items.php');
+        var response = await fetch(`/API/QUERIES/PORTFOLIO/items.php?key=${key}`);
         var json = await response.json();
         portfolioItems = json;
 
@@ -149,16 +151,20 @@
 
 
     async function addSkill(id) {
+        try{
         console.log("adding skill: " + id);
         const current = document.getElementById("skill_" + id).classList.contains("exists");
         const item = document.getElementById("dropdown").value;
         console.log("add skill: " + id + " to item: " + item);
         //TODO: allow remove. for now not doing it
         //set active or remove
-        const url = '/API/QUERIES/PORTFOLIO/updateItem?itemSkill=' + encodeURIComponent(id + "|" + item) + "&remove=" + current;
-        console.log(url)
+        const url = '/API/QUERIES/PORTFOLIO/updateItem?itemSkill=' + encodeURIComponent(id + "|" + item) + "&remove=" + current + `&key=${key}`;
         const response = await fetch(url);
+        console.log("response: ", response);
         setup();
+        }catch(er){
+            console.log("error: ", er);
+        }
 
     }
 </script>

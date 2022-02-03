@@ -18,6 +18,9 @@
 
 <script>
 
+const urlParams = new URLSearchParams(window.location.search);
+const key = urlParams.get('key');
+
 var currentTags = [];
 window.addEventListener('load', (event) => {
   console.log('page is fully loaded');
@@ -25,7 +28,7 @@ window.addEventListener('load', (event) => {
 });
 
 async function getSkills(){
-    const response = await fetch('/API/QUERIES/PORTFOLIO/skills');
+    const response = await fetch(`/API/QUERIES/PORTFOLIO/skills?key=${key}`);
     const json = await response.json();
     skills = json;
     var finalString="";//JSON.stringify(skills);
@@ -45,8 +48,7 @@ async function getSkills(){
 }
 
 async function getTags(s){
-    const url = '/API/QUERIES/PORTFOLIO/skills.php?skill=' + s;
-        console.log(url)
+    const url = `/API/QUERIES/PORTFOLIO/skills.php?skill=${s}&key=${key}`;
         const response = await fetch(url);
     const json = await response.json();
     currentTags = json;
@@ -55,8 +57,7 @@ async function getTags(s){
 
 async function addTag(s,t){
  
-    const url = '/API/QUERIES/PORTFOLIO/updateSkill.php?skillTag=' + encodeURIComponent(s + "|"+t);
-    console.log(url);
+    const url = '/API/QUERIES/PORTFOLIO/updateSkill.php?skillTag=' + encodeURIComponent(s + "|"+t) + `&key=${key}`;
     const response = await fetch(url);
     const json = await response.text();
     console.log(json);

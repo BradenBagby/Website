@@ -10,8 +10,7 @@ if (!$DEV) {
     return;
 }
 
-
-
+authenticate();
 
 function addSkillTag($skill, $tag)
 {
