@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!--Bootstrap <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="/Resources/CSS/main.css">
+<link rel="stylesheet" href="/Resources/CSS/portfolio.css">
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+<!--FONT-->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<script src="/Resources/JS/tile.js"></script>
+
+<head>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="mx-auto order-1">
+            <a class="navbar-brand mx-auto" href="/index.html">Braden Bagby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--END NAVIGATION-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--START_ITEM_ID_15-->
+            <div class="card">
+
+                <div class="p-hidden-overlay">
+
+                </div>
+
+
+
+                <h5 class="card-header">Music Mash</h5>
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <p style="margin-left:20px;margin-right:20px;">
+                            Developed and deployed within 24 hours, Flutter web app for comparing your Spotify music library with friends.
+                        </p>
+
+
+                        <!--DEV OVERVIEW-->
+                        <div class="col-12">
+
+
+
+
+
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Demo Video</strong></h5>
+
+
+                                <p class="card-text">
+
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oZKF23mQvZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </p>
+
+
+
+                            </div>
+                        </div>
+                        <!--END DEV OVERVIEW-->
+
+
+
+
+
+
+                        <!-------Demos-->
+                        <div class="col-12 p-hidden">
+                            <div class="card card-body">
+                                <h5 class="card-title"><strong>Dev Overview</strong></h5>
+                                <p class="card-text"> Work has Fedex days where you have 24 hours to complete a project from scratch. I created MusicMash.</p>
+                                <ul>
+                                    <li>Back end - NodeJS hosted on AWS</li>
+                                    <li>Front end - Flutter web (and some raw javscript/html/css)</li>
+                                    <li>Spotify OAth</li>
+                                    <li>Spotify REST API</li>
+                                </ul>
+
+                                <br>
+                                <a href="https://musicmash.app" target="_blank" class="btn btn-primary">Try it out (musicmash.app)</a><br>
+                                <a href="https://github.com/BradenBagby/MusicMash" target="_blank" class="btn btn-primary">View on Github</a>
+                            </div>
+
+
+
+
+                        </div>
+                        <!--END Demos-->
+
+
+
+
+                        <!--TAGS-->
+
+                        <div class="col-12 skills-column">
+                            <hr>
+                            <h6 class="tile-skills">Skills</h6>
+                            <div class="tile-skills-list"></div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--END_ITEM-->
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
