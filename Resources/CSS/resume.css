@@ -128,7 +128,16 @@ a:hover {
     display: none;
 }
 
+.page-effect-no-print {
+    box-shadow: 5px 5px 10px grey;
+    padding-bottom: 16px;
+}
+
 @media print {
+    .page-effect-no-print {
+        box-shadow: 0 0 0 grey;
+        padding-bottom: 0px;
+    }
     .no-print,
     .no-print * {
         display: none !important;
