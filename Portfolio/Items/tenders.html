@@ -54,7 +54,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <!--START_ITEM_ID_15-->
+            <!--START_ITEM_ID_17-->
             <div class="card">
 
                 <div class="p-hidden-overlay">
@@ -63,13 +63,13 @@
 
 
 
-                <h5 class="card-header">Music Mash</h5>
+                <h5 class="card-header">Tenders - Decide where to Eat</h5>
                 <div class="card-body">
 
                     <div class="row">
 
                         <p style="margin-left:20px;margin-right:20px;">
-                            Developed and deployed within 24 hours, Flutter web app for comparing your Spotify music library with friends.
+                            Swipe with friends on nearby restaurants to decide where to eat. iOS and Android with Flutter. Developed and released in 5 days
                         </p>
 
 
@@ -81,15 +81,26 @@
 
 
                             <div class="card card-body">
-                                <h5 class="card-title"><strong>Demo Video</strong></h5>
+                                <h5 class="card-title"><strong>Overview</strong></h5>
+                                <ul>
+                                    <li>filter by custom query, e.g. "Mexican", "Takeout", "Fast Food", etc</li>
+
+                                    <li> no account necessary - but can connect with Facebook</li>
+
+                                    <li> see summary and who swiped on what</li>
+
+                                    <li> view each restaurants directions, reviews, photos, distance, website, etc.</li>
+
+                                    <li> add an unlimited number of friends to the swiping by sharing a link or QR code</li>
+                                </ul>
 
 
                                 <p class="card-text">
-
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oZKF23mQvZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/e_Wcx0JoEhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </p>
 
-
+                                <a href="https://apps.apple.com/us/app/tenders-decide-where-to-eat/id1606224787" target="_blank" class="btn btn-primary">View In App Store</a><br>
+                                <a href="https://github.com/BradenBagby/Tenders" target="_blank" class="btn btn-primary">View On Github</a>
 
                             </div>
                         </div>
@@ -104,22 +115,15 @@
                         <div class="col-12 p-hidden">
                             <div class="card card-body">
                                 <h5 class="card-title"><strong>Dev Overview</strong></h5>
-                                <p class="card-text"> Work has Fedex days where you have 24 hours to complete a project from scratch. I created MusicMash.</p>
                                 <ul>
-                                    <li>Back end - NodeJS hosted on AWS</li>
-                                    <li>Front end - Flutter web (and some raw javscript/html/css)</li>
-                                    <li>Express + Socket.io</li>
-                                    <li>Spotify OAth</li>
-                                    <li>Spotify REST API</li>
+                                    <li>Google REST APIs</li>
+                                    <li>Firebase</li>
+                                    <li>Facebook OAuth</li>
+                                    <li>Flutter</li>
+                                    <li>developed in 5 days</li>
                                 </ul>
-                                <br>
-                                <p><b>Back end</b> <br> Uses express and socket.io to handle communication with APIs/front end <br><br><b>Front end</b><br> Uses raw js/html/css + bootstrap in files under pages directory. Once user is signed in and has Spotify
-                                    access token, the rest of the app is built with Dart + the Flutter framework under app/flutter-web-app/music_mash. Because I did not want to install flutter framework on the server, the build directory is also included
-                                    in the commit</p>
 
-                                <br>
-                                <a href="https://musicmash.app" target="_blank" class="btn btn-primary">Try it out (musicmash.app)</a><br>
-                                <a href="https://github.com/BradenBagby/MusicMash" target="_blank" class="btn btn-primary">View on Github</a>
+
                             </div>
 
 
@@ -127,6 +131,7 @@
 
                         </div>
                         <!--END Demos-->
+
 
 
 
