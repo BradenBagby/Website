@@ -1,181 +1,185 @@
 body {
-    font-family: Tahoma, Verdana, Segoe, sans-serif;
-    font-variant: normal;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-variant: normal;
+	background-color: var(--background-color);
+	color: var(--font-color);
 }
 
 .title {
-    font-size: .198in;
-    text-transform: uppercase;
-    font-weight: 700;
+	font-size: 0.198in;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--title-color);
 }
 
 .info {
-    font-size: .198in;
+	font-size: 0.198in;
 }
 
 .subInfo {
-    font-size: .153in;
+	font-size: 0.153in;
 }
 
 .infoList {
-    font-size: .140in;
-    padding-left: 1in;
+	font-size: 0.14in;
+	padding-left: 1in;
 }
 
 .tab {
-    display: inline-block;
-    margin-left: 40px;
+	display: inline-block;
+	margin-left: 40px;
 }
 
-.mainArea {}
+.mainArea {
+}
 
 .smallText {
-    font-size: .140in;
+	font-size: 0.14in;
 }
 
 .sideArea {
-    text-align: right;
-    border-right: 2px solid orange;
-    font-size: .135in;
+	text-align: right;
+	border-right: 2px solid orange;
+	font-size: 0.135in;
 }
 
 .contact {
-    text-align: right;
+	text-align: right;
 }
 
 .header {
-    text-align: center;
+	text-align: center;
 }
 
 .header h1 {
-    font-weight: 700;
-    font-size: .4in;
+	font-weight: 700;
+	font-size: 0.4in;
 }
 
 .header h2 {
-    font-size: .3in;
+	font-size: 0.3in;
 }
 
 .overview {
-    margin: 16px;
+	margin: 16px;
 }
 
 .frame {
-    height: 100%;
-    /* Equals maximum image height */
-    width: 100%;
-    white-space: nowrap;
-    /* This is required unless you put the helper span closely near the img */
-    text-align: center;
-    margin: 1em 0;
-    border-right: 2px solid orange
+	height: 100%;
+	/* Equals maximum image height */
+	width: 100%;
+	white-space: nowrap;
+	/* This is required unless you put the helper span closely near the img */
+	text-align: center;
+	margin: 1em 0;
+	border-right: 2px solid orange;
 }
 
 .helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 
 .profileImage {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 a {
-    color: black;
-    transition: color 1s ease-in-out;
-    text-decoration: inherit;
-    background-color: inherit;
+	color: black;
+	transition: color 1s ease-in-out;
+	text-decoration: inherit;
+	background-color: inherit;
 }
 
 a:hover {
-    transition: color 0.1s ease;
+	transition: color 0.1s ease;
 }
 
 .footer {
-    background-color: #343a40;
-    width: 100%;
-    height: 200px;
-    display: inline-block;
-    border-radius: 15px 15px 0 0;
+	background-color: #343a40;
+	width: 100%;
+	height: 200px;
+	display: inline-block;
+	border-radius: 15px 15px 0 0;
 }
 
 .resume {
-    padding: 8px;
+	padding: 8px;
 }
 
 .skills {
-    background-color: black !important;
-    border-radius: 0 !important;
-    border-top: 4px solid orange;
+	background-color: black !important;
+	border-radius: 0 !important;
+	border-top: 4px solid orange;
 }
 
 .content,
 .portfolio-tile {
-    background-color: rgb(150, 150, 150);
+	background-color: rgb(150, 150, 150);
 }
 
 .website {
-    display: none;
+	display: none;
 }
 
 .print-helper {
-    width: 100%;
-    height: 30px;
+	width: 100%;
+	height: 30px;
 }
 
 .print-only {
-    display: none;
+	display: none;
 }
 
 .page-effect-no-print {
-    box-shadow: 5px 5px 10px grey;
-    padding-bottom: 16px;
+	box-shadow: 5px 5px 10px grey;
+	padding-bottom: 16px;
 }
 
 @media print {
-    .page-effect-no-print {
-        box-shadow: 0 0 0 grey;
-        padding-bottom: 0px;
-    }
-    .no-print,
-    .no-print * {
-        display: none !important;
-    }
-    .print-helper {
-        height: 115px;
-    }
-    .print-only {
-        display: block !important;
-    }
-    a {
-        text-decoration: none !important;
-        color: initial;
-    }
-    a:hover {
-        text-decoration: none !important;
-        color: initial;
-    }
-    .website {
-        display: block;
-    }
-    .title {
-        font-size: .2156in;
-    }
-    .info {
-        font-size: .2156in;
-    }
-    .subInfo {
-        font-size: .16666in;
-    }
-    .infoList {
-        font-size: .152in;
-    }
+	.page-effect-no-print {
+		box-shadow: 0 0 0 grey;
+		padding-bottom: 0px;
+	}
+	.no-print,
+	.no-print * {
+		display: none !important;
+	}
+	.print-helper {
+		height: 115px;
+	}
+	.print-only {
+		display: block !important;
+	}
+	a {
+		text-decoration: none !important;
+		color: initial;
+	}
+	a:hover {
+		text-decoration: none !important;
+		color: initial;
+	}
+	.website {
+		display: block;
+	}
+	.title {
+		font-size: 0.2156in;
+	}
+	.info {
+		font-size: 0.2156in;
+	}
+	.subInfo {
+		font-size: 0.16666in;
+	}
+	.infoList {
+		font-size: 0.152in;
+	}
 }
 
 .socialMedia {
-    display: flex;
-    height: 25px;
-    align-items: center;
-    justify-content: space-evenly;
+	display: flex;
+	height: 25px;
+	align-items: center;
+	justify-content: space-evenly;
 }

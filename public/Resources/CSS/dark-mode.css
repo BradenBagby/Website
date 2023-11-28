@@ -1,0 +1,68 @@
+:root {
+	--background-color: inherit; /* Light mode background color */
+	--font-color: inherit; /* Light gray font color for body text */
+	--title-color: inherit; /* White font color for titles */
+}
+
+/* Dark mode styles */
+.dark-mode {
+	--background-color: #1b1d21; /* Dark mode background color */
+	--font-color: #e0e0e0; /* Light gray font color for body text in dark mode */
+	--title-color: #ffffff; /* White font color for titles in dark mode */
+}
+
+/* Switch Styles */
+.switch {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 100;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+
+}
+
+input:checked + .slider:before {
+    z-index: 200;
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.switch-icon {
+	width: 20px; /* Set a specific width */
+	height: 20px; /* Set a specific height */
+	position: absolute;
+	top: 8px;
+	left: 33px;
+	z-index: 200;
+	opacity: 0.5;
+}
