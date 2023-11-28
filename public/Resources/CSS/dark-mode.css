@@ -2,6 +2,8 @@
 	--background-color: inherit; /* Light mode background color */
 	--font-color: inherit; /* Light gray font color for body text */
 	--title-color: inherit; /* White font color for titles */
+	--switch-color: #ccc;
+	--switch-toggle-color: white;
 }
 
 /* Dark mode styles */
@@ -9,6 +11,8 @@
 	--background-color: #1b1d21; /* Dark mode background color */
 	--font-color: #e0e0e0; /* Light gray font color for body text in dark mode */
 	--title-color: #ffffff; /* White font color for titles in dark mode */
+	--switch-color: #2b2e32;
+	--switch-toggle-color: #1b1d21;
 }
 
 /* Switch Styles */
@@ -30,7 +34,8 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: var(--switch-color);
+
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -42,7 +47,7 @@
 	width: 16px;
 	left: 4px;
 	bottom: 2px;
-	background-color: white;
+	background-color: var(--switch-toggle-color);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
