@@ -175,6 +175,16 @@ a:hover {
 	.infoList {
 		font-size: 0.152in;
 	}
+
+	body {
+		color: inherit !important;
+		color: inherit !important;
+	}
+	
+	.title {
+		color: inherit !important;
+	}
+	
 }
 
 .socialMedia {

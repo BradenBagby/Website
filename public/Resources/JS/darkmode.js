@@ -1,6 +1,6 @@
 window.addEventListener('load', (event) => {
 	const darkModeSwitch = document.createElement('label');
-	darkModeSwitch.className = 'switch';
+	darkModeSwitch.className = 'switch no-print';
 	darkModeSwitch.innerHTML = `
     <img class="switch-icon" src="Assets/lightbulb-regular.svg">
       <input type="checkbox" id="dark-mode-toggle">
